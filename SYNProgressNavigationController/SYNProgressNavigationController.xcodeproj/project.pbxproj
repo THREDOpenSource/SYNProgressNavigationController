@@ -405,6 +405,7 @@
 				DCA438F71B38DD7C009536B9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DCA438F81B38DD7C009536B9 /* Build configuration list for PBXNativeTarget "SYNProgressNavigationControllerTests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +414,7 @@
 				DCA438FA1B38DD7C009536B9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
