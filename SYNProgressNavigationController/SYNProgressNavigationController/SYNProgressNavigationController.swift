@@ -15,6 +15,7 @@ public class SYNProgressNavigationController: UINavigationController {
     public var progressBar: UIProgressView! = nil
     public var messageLabel: UILabel! = nil
     
+    @objc
     public required init(coder aDecoder: NSCoder) {
 
         super.init(coder: aDecoder)
@@ -38,33 +39,29 @@ public class SYNProgressNavigationController: UINavigationController {
         self.navigationBar.addSubview(progressBar)
     }
     
-    override public func viewDidLoad() {
-        
-        super.viewDidLoad()
-    }
-    
     // MARK: - Progress bar
-    
-    public func showProgress(progress: Float?) {
+    @objc
+    public func showProgress(progress: NSNumber?) {
         
         if let progress = progress {
             fade({ self.progressBar.alpha = 1.0 })
-            progressBar.setProgress(progress, animated: true)
+            progressBar.setProgress(progress.floatValue, animated: true)
         } else {
             fade({ self.progressBar.alpha = 0.0 })
             progressBar.setProgress(0.0, animated: true)
         }
     }
     
+    @objc
     public func showMessage(message: String?) {
         
         if let message = message {
+            messageLabel.text = message
             fade({ self.messageLabel.alpha = 1.0 })
         } else {
+            messageLabel.text = ""
             fade({ self.messageLabel.alpha = 0.0 })
         }
-        
-        messageLabel.text = message
     }
     
     func fade(block: () -> Void) {

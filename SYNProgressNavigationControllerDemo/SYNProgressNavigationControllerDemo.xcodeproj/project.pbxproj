@@ -176,6 +176,7 @@
 		DCA438FF1B38DE24009536B9 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = Syntertainment;
 				TargetAttributes = {
