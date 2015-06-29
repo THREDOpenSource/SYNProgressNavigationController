@@ -17,7 +17,6 @@ public class SYNProgressNavigationController: UINavigationController {
     
     @objc
     public required init(coder aDecoder: NSCoder) {
-
         super.init(coder: aDecoder)
         
         let width = UIScreen.mainScreen().bounds.width
@@ -47,14 +46,13 @@ public class SYNProgressNavigationController: UINavigationController {
             fade({ self.progressBar.alpha = 1.0 })
             progressBar.setProgress(progress.floatValue, animated: true)
         } else {
-            fade({ self.progressBar.alpha = 0.0 })
+            fade { self.progressBar.alpha = 0.0 }
             progressBar.setProgress(0.0, animated: true)
         }
     }
     
     @objc
     public func showMessage(message: String?) {
-        
         if let message = message {
             messageLabel.text = message
             fade({ self.messageLabel.alpha = 1.0 })
